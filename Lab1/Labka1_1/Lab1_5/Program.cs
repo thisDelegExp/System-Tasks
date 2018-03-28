@@ -21,7 +21,7 @@ namespace Lab1_5
                     registryKey.SetValue("P2", numbers, RegistryValueKind.Binary);
                     registryKey.SetValue("P3", 0x2C6BCEDF, RegistryValueKind.DWord);
                     registryKey.SetValue("P4", 709611231, RegistryValueKind.DWord);
-					//
+					
                 }
             }
             catch (Exception e) {
