@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,8 +45,8 @@ namespace Lab_1._4
                     mailUser.Caption = "";
                     mailUser.Message = DateTime.Now.ToString() + " Nikita Galchenko";
                     mailUser.MailTo = "";
-                    mailUser.Email = "Skalpel52@gmail.com";
-                    mailUser.Password = "NIKITOSMOLOTOK";
+                    mailUser.Email = "";//email
+                    mailUser.Password = "";//password
 
                     string input = "";
 
