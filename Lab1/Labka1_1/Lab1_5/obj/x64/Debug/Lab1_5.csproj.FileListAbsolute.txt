@@ -1,0 +1,6 @@
+D:\SysProg\Lab1\Labka1_1\Lab1_5\obj\x64\Debug\Lab1_5.csproj.CoreCompileInputs.cache
+D:\SysProg\Lab1\Labka1_1\Lab1_5\bin\x64\Debug\Lab1_5.exe.config
+D:\SysProg\Lab1\Labka1_1\Lab1_5\bin\x64\Debug\Lab1_5.exe
+D:\SysProg\Lab1\Labka1_1\Lab1_5\bin\x64\Debug\Lab1_5.pdb
+D:\SysProg\Lab1\Labka1_1\Lab1_5\obj\x64\Debug\Lab1_5.exe
+D:\SysProg\Lab1\Labka1_1\Lab1_5\obj\x64\Debug\Lab1_5.pdb

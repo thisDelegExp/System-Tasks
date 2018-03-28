@@ -1,0 +1,7 @@
+D:\SysProg\Lab1\Labka1_1\Lab1_3\obj\Debug\Lab1_3.csprojResolveAssemblyReference.cache
+D:\SysProg\Lab1\Labka1_1\Lab1_3\obj\Debug\Lab1_3.csproj.CoreCompileInputs.cache
+D:\SysProg\Lab1\Labka1_1\Lab1_3\bin\Debug\Lab1_3.exe.config
+D:\SysProg\Lab1\Labka1_1\Lab1_3\bin\Debug\Lab1_3.exe
+D:\SysProg\Lab1\Labka1_1\Lab1_3\bin\Debug\Lab1_3.pdb
+D:\SysProg\Lab1\Labka1_1\Lab1_3\obj\Debug\Lab1_3.exe
+D:\SysProg\Lab1\Labka1_1\Lab1_3\obj\Debug\Lab1_3.pdb
