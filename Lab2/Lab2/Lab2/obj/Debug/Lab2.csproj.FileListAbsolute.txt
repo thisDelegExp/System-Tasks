@@ -1,0 +1,11 @@
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe.config
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\bin\Debug\Lab2.pdb
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.csprojResolveAssemblyReference.cache
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.Properties.Resources.resources
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.GenerateResource.cache
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.exe
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.pdb
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.MainFrom.resources
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.ChildFrom.resources
