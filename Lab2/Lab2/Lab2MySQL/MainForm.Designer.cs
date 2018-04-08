@@ -30,7 +30,6 @@ namespace Lab2
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.logo = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
@@ -54,12 +53,10 @@ namespace Lab2
             this.artclTextbox = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.nameGroupBox = new System.Windows.Forms.GroupBox();
-            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.queryGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.nameGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // logo
@@ -76,7 +73,7 @@ namespace Lab2
             // 
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.title.Location = new System.Drawing.Point(218, 27);
+            this.title.Location = new System.Drawing.Point(218, 20);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(317, 73);
             this.title.TabIndex = 1;
@@ -276,10 +273,6 @@ namespace Lab2
             this.nameGroupBox.TabStop = false;
             this.nameGroupBox.Text = "ПІБ";
             // 
-            // errorProvider
-            // 
-            this.errorProvider.ContainerControl = this;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,7 +295,7 @@ namespace Lab2
             this.Controls.Add(this.title);
             this.Controls.Add(this.logo);
             this.Name = "MainForm";
-            this.Text = "Scientists [MSSQL Release]";
+            this.Text = "Scientists [MySQL release]";
             this.Load += new System.EventHandler(this.MainFrom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.queryGroupBox.ResumeLayout(false);
@@ -310,7 +303,6 @@ namespace Lab2
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.nameGroupBox.ResumeLayout(false);
             this.nameGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,7 +332,6 @@ namespace Lab2
         private System.Windows.Forms.TextBox artclTextbox;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.GroupBox nameGroupBox;
-        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
 

@@ -1,0 +1,14 @@
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\obj\Debug\Lab2MySQL.csprojResolveAssemblyReference.cache
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\obj\Debug\Lab2.ChildForm.resources
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\obj\Debug\Lab2.MainForm.resources
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\obj\Debug\Lab2MySQL.Properties.Resources.resources
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\obj\Debug\Lab2MySQL.csproj.GenerateResource.cache
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\obj\Debug\Lab2MySQL.csproj.CoreCompileInputs.cache
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\bin\Debug\Lab2MySQL.exe.config
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\bin\Debug\Lab2MySQL.exe
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\bin\Debug\Lab2MySQL.pdb
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\obj\Debug\Lab2MySQL.exe
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\obj\Debug\Lab2MySQL.pdb
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\bin\Debug\MySql.Data.dll
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\bin\Debug\MySql.Data.xml
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2MySQL\obj\Debug\Lab2MySQL.csproj.CopyComplete

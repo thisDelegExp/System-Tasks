@@ -1,6 +1,6 @@
 ﻿namespace Lab2
 {
-    partial class ChildFrom
+    partial class ChildForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
         {
             this.logo = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
-            this.directGroupBox = new System.Windows.Forms.GroupBox();
+            this.queryGroupBox = new System.Windows.Forms.GroupBox();
             this.deleteRadioButton = new System.Windows.Forms.RadioButton();
             this.updateRadioButton = new System.Windows.Forms.RadioButton();
             this.addRadioButton = new System.Windows.Forms.RadioButton();
@@ -46,7 +46,7 @@
             this.descTextBox = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
-            this.directGroupBox.SuspendLayout();
+            this.queryGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,91 +67,95 @@
             this.title.TabIndex = 1;
             this.title.Text = "label1";
             // 
-            // directGroupBox
+            // queryGroupBox
             // 
-            this.directGroupBox.Controls.Add(this.deleteRadioButton);
-            this.directGroupBox.Controls.Add(this.updateRadioButton);
-            this.directGroupBox.Controls.Add(this.addRadioButton);
-            this.directGroupBox.Controls.Add(this.getRadioButton);
-            this.directGroupBox.Location = new System.Drawing.Point(43, 222);
-            this.directGroupBox.Name = "directGroupBox";
-            this.directGroupBox.Size = new System.Drawing.Size(140, 127);
-            this.directGroupBox.TabIndex = 2;
-            this.directGroupBox.TabStop = false;
-            this.directGroupBox.Text = "groupBox1";
+            this.queryGroupBox.Controls.Add(this.deleteRadioButton);
+            this.queryGroupBox.Controls.Add(this.updateRadioButton);
+            this.queryGroupBox.Controls.Add(this.addRadioButton);
+            this.queryGroupBox.Controls.Add(this.getRadioButton);
+            this.queryGroupBox.Location = new System.Drawing.Point(43, 222);
+            this.queryGroupBox.Name = "queryGroupBox";
+            this.queryGroupBox.Size = new System.Drawing.Size(140, 127);
+            this.queryGroupBox.TabIndex = 2;
+            this.queryGroupBox.TabStop = false;
+            this.queryGroupBox.Text = "groupBox1";
             // 
             // deleteRadioButton
             // 
             this.deleteRadioButton.AutoSize = true;
             this.deleteRadioButton.Location = new System.Drawing.Point(6, 89);
             this.deleteRadioButton.Name = "deleteRadioButton";
-            this.deleteRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.deleteRadioButton.Size = new System.Drawing.Size(67, 17);
             this.deleteRadioButton.TabIndex = 3;
             this.deleteRadioButton.TabStop = true;
-            this.deleteRadioButton.Text = "radioButton4";
+            this.deleteRadioButton.Text = "DELETE";
             this.deleteRadioButton.UseVisualStyleBackColor = true;
+            this.deleteRadioButton.CheckedChanged += new System.EventHandler(this.DeleteRadioButton_CheckedChanged);
             // 
             // updateRadioButton
             // 
             this.updateRadioButton.AutoSize = true;
             this.updateRadioButton.Location = new System.Drawing.Point(7, 66);
             this.updateRadioButton.Name = "updateRadioButton";
-            this.updateRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.updateRadioButton.Size = new System.Drawing.Size(69, 17);
             this.updateRadioButton.TabIndex = 2;
             this.updateRadioButton.TabStop = true;
-            this.updateRadioButton.Text = "radioButton3";
+            this.updateRadioButton.Text = "UPDATE";
             this.updateRadioButton.UseVisualStyleBackColor = true;
+            this.updateRadioButton.CheckedChanged += new System.EventHandler(this.UpdateRadioButton_CheckedChanged);
             // 
             // addRadioButton
             // 
             this.addRadioButton.AutoSize = true;
             this.addRadioButton.Location = new System.Drawing.Point(6, 43);
             this.addRadioButton.Name = "addRadioButton";
-            this.addRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.addRadioButton.Size = new System.Drawing.Size(65, 17);
             this.addRadioButton.TabIndex = 1;
             this.addRadioButton.TabStop = true;
-            this.addRadioButton.Text = "radioButton2";
+            this.addRadioButton.Text = "INSERT";
             this.addRadioButton.UseVisualStyleBackColor = true;
+            this.addRadioButton.CheckedChanged += new System.EventHandler(this.AddRadioButton_CheckedChanged);
             // 
             // getRadioButton
             // 
             this.getRadioButton.AutoSize = true;
             this.getRadioButton.Location = new System.Drawing.Point(7, 20);
             this.getRadioButton.Name = "getRadioButton";
-            this.getRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.getRadioButton.Size = new System.Drawing.Size(66, 17);
             this.getRadioButton.TabIndex = 0;
             this.getRadioButton.TabStop = true;
-            this.getRadioButton.Text = "radioButton1";
+            this.getRadioButton.Text = "SELECT";
             this.getRadioButton.UseVisualStyleBackColor = true;
+            this.getRadioButton.CheckedChanged += new System.EventHandler(this.GetRadioButton_CheckedChanged);
             // 
             // execButton
             // 
-            this.execButton.Location = new System.Drawing.Point(43, 367);
+            this.execButton.Location = new System.Drawing.Point(43, 383);
             this.execButton.Name = "execButton";
-            this.execButton.Size = new System.Drawing.Size(75, 23);
+            this.execButton.Size = new System.Drawing.Size(140, 49);
             this.execButton.TabIndex = 3;
-            this.execButton.Text = "button1";
+            this.execButton.Text = "Excute";
             this.execButton.UseVisualStyleBackColor = true;
-            this.execButton.Click += new System.EventHandler(this.execButton_Click);
+            this.execButton.Click += new System.EventHandler(this.ExecButton_Click);
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(43, 405);
+            this.backButton.Location = new System.Drawing.Point(43, 456);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.Size = new System.Drawing.Size(140, 45);
             this.backButton.TabIndex = 4;
-            this.backButton.Text = "button2";
+            this.backButton.Text = "Back to Main";
             this.backButton.UseVisualStyleBackColor = true;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            this.backButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // IDlabel
             // 
             this.IDlabel.AutoSize = true;
             this.IDlabel.Location = new System.Drawing.Point(243, 159);
             this.IDlabel.Name = "IDlabel";
-            this.IDlabel.Size = new System.Drawing.Size(35, 13);
+            this.IDlabel.Size = new System.Drawing.Size(18, 13);
             this.IDlabel.TabIndex = 5;
-            this.IDlabel.Text = "label2";
+            this.IDlabel.Text = "ID";
             // 
             // nameLabel
             // 
@@ -160,16 +164,16 @@
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(35, 13);
             this.nameLabel.TabIndex = 6;
-            this.nameLabel.Text = "label3";
+            this.nameLabel.Text = "Name";
             // 
             // descLabel
             // 
             this.descLabel.AutoSize = true;
             this.descLabel.Location = new System.Drawing.Point(460, 159);
             this.descLabel.Name = "descLabel";
-            this.descLabel.Size = new System.Drawing.Size(35, 13);
+            this.descLabel.Size = new System.Drawing.Size(60, 13);
             this.descLabel.TabIndex = 7;
-            this.descLabel.Text = "label4";
+            this.descLabel.Text = "Description";
             // 
             // IDtextBox
             // 
@@ -200,7 +204,7 @@
             this.dataGridView.Size = new System.Drawing.Size(460, 279);
             this.dataGridView.TabIndex = 11;
             // 
-            // ChildFrom
+            // ChildForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,15 +218,15 @@
             this.Controls.Add(this.IDlabel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.execButton);
-            this.Controls.Add(this.directGroupBox);
+            this.Controls.Add(this.queryGroupBox);
             this.Controls.Add(this.title);
             this.Controls.Add(this.logo);
-            this.Name = "ChildFrom";
-            this.Text = "ChildFrom";
+            this.Name = "ChildForm";
+            this.Text = "ChildForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChildFrom_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
-            this.directGroupBox.ResumeLayout(false);
-            this.directGroupBox.PerformLayout();
+            this.queryGroupBox.ResumeLayout(false);
+            this.queryGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -233,7 +237,7 @@
 
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.GroupBox directGroupBox;
+        private System.Windows.Forms.GroupBox queryGroupBox;
         private System.Windows.Forms.RadioButton deleteRadioButton;
         private System.Windows.Forms.RadioButton updateRadioButton;
         private System.Windows.Forms.RadioButton addRadioButton;

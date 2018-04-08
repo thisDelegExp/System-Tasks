@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using  System.Configuration;
 using System.Data.Common;
-using System.Data.SqlClient;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 using System.Media;
 using System.Text.RegularExpressions;
 
@@ -58,7 +59,7 @@ namespace Lab2
 
         private void CheckData(string[] predefinedRows)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
 
                 connection.Open();
@@ -68,8 +69,8 @@ namespace Lab2
 
                     string sqlSelect =
                         $"Select * From ResearchDirections Where Name = '{predefinedRows[i]}' And Description= '{predefinedRows[i + 1]}' ";
-                    SqlCommand command = new SqlCommand(sqlSelect, connection);
-                    using (SqlDataReader result = command.ExecuteReader())
+                    MySqlCommand command = new MySqlCommand(sqlSelect, connection);
+                    using (MySqlDataReader result = command.ExecuteReader())
                     {
                         if (!result.HasRows)
                         {
@@ -93,7 +94,7 @@ namespace Lab2
         private void DirectDropDown_Click(object sender, EventArgs e)
         {
             List<string> directionList = new List<string>();
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
 
                 connection.Open();
@@ -101,8 +102,8 @@ namespace Lab2
                 string
                     sqlExp =
                         @"Select Name From ResearchDirections"; //@"Select rd.Name From ResearchDirections as rd Inner Join Scientists as sc on sc.DirectionID=rd.ID";
-                SqlCommand command = new SqlCommand(sqlExp, connection);
-                SqlDataReader data = command.ExecuteReader();
+                MySqlCommand command = new MySqlCommand(sqlExp, connection);
+                MySqlDataReader data = command.ExecuteReader();
 
                 while (data.Read())
                 {
@@ -130,10 +131,10 @@ namespace Lab2
 
         public void ExecuteSelectQuery(string query, DataGridView grid)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 grid.DataSource = ds.Tables[0];
@@ -143,10 +144,10 @@ namespace Lab2
 
         public void ExecuteNonSelectQuery(string query)
         {
-            using (SqlConnection connection= new SqlConnection(connectionString))
+            using (MySqlConnection connection= new MySqlConnection(connectionString))
             {
                 connection.Open();
-                SqlCommand command= new SqlCommand(query,connection);
+                MySqlCommand command= new MySqlCommand(query,connection);
                 int affectedRows = command.ExecuteNonQuery();
                 MessageBox.Show(affectedRows.ToString());
             }
@@ -286,13 +287,13 @@ namespace Lab2
         private int? GetDirection()
         {
             int? result=null;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
 
                 connection.Open();
-                string sqlExp = $"Select ID From ResearchDirections Where [Name]='{directDropDown.Text}'";
-                SqlCommand command = new SqlCommand(sqlExp, connection);
-                SqlDataReader data = command.ExecuteReader();
+                string sqlExp = $"Select ID From ResearchDirections Where Name='{directDropDown.Text}'";
+                MySqlCommand command = new MySqlCommand(sqlExp, connection);
+                MySqlDataReader data = command.ExecuteReader();
                 while (data.Read())
                 {
                     result =(int) data[0];

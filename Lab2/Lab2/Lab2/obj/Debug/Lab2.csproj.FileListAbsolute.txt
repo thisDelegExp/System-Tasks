@@ -7,5 +7,5 @@ D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.GenerateResource.c
 D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
 D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.exe
 D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.pdb
-D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.MainFrom.resources
-D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.ChildFrom.resources
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.ChildForm.resources
+D:\Projects\System-Tasks\Lab2\Lab2\Lab2\obj\Debug\Lab2.MainForm.resources
