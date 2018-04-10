@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChildForm));
             this.logo = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
             this.queryGroupBox = new System.Windows.Forms.GroupBox();
@@ -52,20 +53,23 @@
             // 
             // logo
             // 
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
             this.logo.Location = new System.Drawing.Point(43, 54);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(111, 118);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 0;
             this.logo.TabStop = false;
             // 
             // title
             // 
             this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.title.Location = new System.Drawing.Point(215, 54);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(35, 13);
+            this.title.Size = new System.Drawing.Size(336, 33);
             this.title.TabIndex = 1;
-            this.title.Text = "label1";
+            this.title.Text = "Напрямки досліджень";
             // 
             // queryGroupBox
             // 
@@ -73,46 +77,46 @@
             this.queryGroupBox.Controls.Add(this.updateRadioButton);
             this.queryGroupBox.Controls.Add(this.addRadioButton);
             this.queryGroupBox.Controls.Add(this.getRadioButton);
-            this.queryGroupBox.Location = new System.Drawing.Point(43, 222);
+            this.queryGroupBox.Location = new System.Drawing.Point(43, 198);
             this.queryGroupBox.Name = "queryGroupBox";
-            this.queryGroupBox.Size = new System.Drawing.Size(140, 127);
+            this.queryGroupBox.Size = new System.Drawing.Size(140, 170);
             this.queryGroupBox.TabIndex = 2;
             this.queryGroupBox.TabStop = false;
-            this.queryGroupBox.Text = "groupBox1";
+            this.queryGroupBox.Text = "Тип запиту";
             // 
             // deleteRadioButton
             // 
             this.deleteRadioButton.AutoSize = true;
-            this.deleteRadioButton.Location = new System.Drawing.Point(6, 89);
+            this.deleteRadioButton.Location = new System.Drawing.Point(7, 132);
             this.deleteRadioButton.Name = "deleteRadioButton";
-            this.deleteRadioButton.Size = new System.Drawing.Size(67, 17);
+            this.deleteRadioButton.Size = new System.Drawing.Size(133, 30);
             this.deleteRadioButton.TabIndex = 3;
             this.deleteRadioButton.TabStop = true;
-            this.deleteRadioButton.Text = "DELETE";
+            this.deleteRadioButton.Text = "Вилучення напрямку \r\nдослідження";
             this.deleteRadioButton.UseVisualStyleBackColor = true;
             this.deleteRadioButton.CheckedChanged += new System.EventHandler(this.DeleteRadioButton_CheckedChanged);
             // 
             // updateRadioButton
             // 
             this.updateRadioButton.AutoSize = true;
-            this.updateRadioButton.Location = new System.Drawing.Point(7, 66);
+            this.updateRadioButton.Location = new System.Drawing.Point(6, 92);
             this.updateRadioButton.Name = "updateRadioButton";
-            this.updateRadioButton.Size = new System.Drawing.Size(69, 17);
+            this.updateRadioButton.Size = new System.Drawing.Size(133, 43);
             this.updateRadioButton.TabIndex = 2;
             this.updateRadioButton.TabStop = true;
-            this.updateRadioButton.Text = "UPDATE";
+            this.updateRadioButton.Text = "Оновлення напрямку\r\nдослідження\r\n\r\n";
             this.updateRadioButton.UseVisualStyleBackColor = true;
             this.updateRadioButton.CheckedChanged += new System.EventHandler(this.UpdateRadioButton_CheckedChanged);
             // 
             // addRadioButton
             // 
             this.addRadioButton.AutoSize = true;
-            this.addRadioButton.Location = new System.Drawing.Point(6, 43);
+            this.addRadioButton.Location = new System.Drawing.Point(7, 56);
             this.addRadioButton.Name = "addRadioButton";
-            this.addRadioButton.Size = new System.Drawing.Size(65, 17);
+            this.addRadioButton.Size = new System.Drawing.Size(134, 30);
             this.addRadioButton.TabIndex = 1;
             this.addRadioButton.TabStop = true;
-            this.addRadioButton.Text = "INSERT";
+            this.addRadioButton.Text = "Додавання напрямку\r\n дослідження\r\n";
             this.addRadioButton.UseVisualStyleBackColor = true;
             this.addRadioButton.CheckedChanged += new System.EventHandler(this.AddRadioButton_CheckedChanged);
             // 
@@ -121,10 +125,10 @@
             this.getRadioButton.AutoSize = true;
             this.getRadioButton.Location = new System.Drawing.Point(7, 20);
             this.getRadioButton.Name = "getRadioButton";
-            this.getRadioButton.Size = new System.Drawing.Size(66, 17);
+            this.getRadioButton.Size = new System.Drawing.Size(138, 30);
             this.getRadioButton.TabIndex = 0;
             this.getRadioButton.TabStop = true;
-            this.getRadioButton.Text = "SELECT";
+            this.getRadioButton.Text = "Отримання всіх \r\nнапрямків досліджень\r\n";
             this.getRadioButton.UseVisualStyleBackColor = true;
             this.getRadioButton.CheckedChanged += new System.EventHandler(this.GetRadioButton_CheckedChanged);
             // 
@@ -134,7 +138,7 @@
             this.execButton.Name = "execButton";
             this.execButton.Size = new System.Drawing.Size(140, 49);
             this.execButton.TabIndex = 3;
-            this.execButton.Text = "Excute";
+            this.execButton.Text = "Виконати запит";
             this.execButton.UseVisualStyleBackColor = true;
             this.execButton.Click += new System.EventHandler(this.ExecButton_Click);
             // 
@@ -144,7 +148,7 @@
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(140, 45);
             this.backButton.TabIndex = 4;
-            this.backButton.Text = "Back to Main";
+            this.backButton.Text = "Назад";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
@@ -162,18 +166,18 @@
             this.nameLabel.AutoSize = true;
             this.nameLabel.Location = new System.Drawing.Point(348, 159);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel.Size = new System.Drawing.Size(39, 13);
             this.nameLabel.TabIndex = 6;
-            this.nameLabel.Text = "Name";
+            this.nameLabel.Text = "Назва";
             // 
             // descLabel
             // 
             this.descLabel.AutoSize = true;
             this.descLabel.Location = new System.Drawing.Point(460, 159);
             this.descLabel.Name = "descLabel";
-            this.descLabel.Size = new System.Drawing.Size(60, 13);
+            this.descLabel.Size = new System.Drawing.Size(33, 13);
             this.descLabel.TabIndex = 7;
-            this.descLabel.Text = "Description";
+            this.descLabel.Text = "Опис";
             // 
             // IDtextBox
             // 
@@ -198,6 +202,8 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(209, 222);
             this.dataGridView.Name = "dataGridView";
@@ -208,6 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(681, 513);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.descTextBox);
@@ -222,7 +229,7 @@
             this.Controls.Add(this.title);
             this.Controls.Add(this.logo);
             this.Name = "ChildForm";
-            this.Text = "ChildForm";
+            this.Text = "Напрямки досліджень [MySQL Version]";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChildFrom_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.queryGroupBox.ResumeLayout(false);

@@ -18,9 +18,9 @@ namespace Lab2
 {
     public partial class MainForm : Form
     {
-        private Form _childForm;
+        private Form _childForm; 
 
-        private Control[] flexControls;
+        private Control[] flexControls; //array of controls which could be re/activated , coresponding to chosen query
 
 
         private string connectionString;
@@ -32,13 +32,13 @@ namespace Lab2
             InitializeComponent();
             connectionString = ConfigurationManager
                 .ConnectionStrings["Lab2.Properties.Settings.ScientistsConnectionString"].ConnectionString;
-            //expPatterns= new Dictionary<string, string>();
+            
             flexControls=new Control[]{IDtextbox,nameTextbox,midNameTextbox,surnameTextbox,directDropDown,artclTextbox,byIDCheck,byDirectCheck};
 
 
         }
 
-        private void DirecButton_Click(object sender, EventArgs e)
+        private void DirecButton_Click(object sender, EventArgs e) // go to child form,  link to which is stored in _childForm 
         {
             if (_childForm == null || _childForm.IsDisposed)
             {
@@ -50,14 +50,14 @@ namespace Lab2
 
         }
 
-        private void MainFrom_Load(object sender, EventArgs e)
+        private void MainFrom_Load(object sender, EventArgs e) 
         {
             string[] predefinedData = ConfigurationManager.AppSettings["predefinedDirects"].Split(',')
                 .Select(s => s.Trim()).ToArray();
             CheckData(predefinedData);
         }
 
-        private void CheckData(string[] predefinedRows)
+        private void CheckData(string[] predefinedRows) // check if table contains predefined rows, if not then add them
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -91,7 +91,7 @@ namespace Lab2
             }
         }
 
-        private void DirectDropDown_Click(object sender, EventArgs e)
+        private void DirectDropDown_Click(object sender, EventArgs e) //retrieving directions names by their id
         {
             List<string> directionList = new List<string>();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -114,7 +114,7 @@ namespace Lab2
             directDropDown.DataSource = directionList;
         }
 
-        private void ExecButton_Click(object sender, EventArgs e)
+        private void ExecButton_Click(object sender, EventArgs e) 
         {
             if (InputAnalisys())
             {
@@ -129,7 +129,7 @@ namespace Lab2
 
         }
 
-        public void ExecuteSelectQuery(string query, DataGridView grid)
+        public void ExecuteSelectQuery(string query, DataGridView grid) 
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -142,7 +142,7 @@ namespace Lab2
             }
         }
 
-        public void ExecuteNonSelectQuery(string query)
+        public void ExecuteNonSelectQuery(string query) //for non-select query types, shows number of affected rows
         {
             using (MySqlConnection connection= new MySqlConnection(connectionString))
             {
@@ -153,7 +153,7 @@ namespace Lab2
             }
         }
 
-        private bool InputAnalisys()
+        private bool InputAnalisys() //checks textboxes for appropriate input
         {
             bool check=true;
             string errorMsg = String.Empty;
@@ -217,14 +217,14 @@ namespace Lab2
             return check;
         }
 
-        public bool FormatCheck(string input)
+        public bool FormatCheck(string input) //regex for text only
         {
             Regex pattern = new Regex("^[a-zA-Zа-яА-ЯіІїЇєЄ'][a-zA-Zа-яА-Я-'іІїЇєЄ ]+[a-zA-Zа-яА-ЯіІїЇєЄ']?$");
             Match check = pattern.Match(input);
             return check.Success;
         }
 
-        public  string CookQuery()
+        public  string CookQuery() //pick apropriate query
         {
             string sqlExp = String.Empty;
 
@@ -259,7 +259,7 @@ namespace Lab2
             return $"Delete From Scientists Where ID={IDtextbox.Text}";
         }
 
-        public void ReactivateControlls(bool[] values, Control[] controls)
+        public void ReactivateControlls(bool[] values, Control[] controls) // re/activating controls, listed in array, acording to bool values
         {
             if (values.Length == controls.Length)
             {
@@ -284,7 +284,7 @@ namespace Lab2
             return $"Insert Into Scientists(FirstName,MiddleName,Surname,DirectionId,ArticlesNumber) Values('{nameTextbox.Text}','{midNameTextbox.Text}','{surnameTextbox.Text}',{GetDirection()},{int.Parse(artclTextbox.Text)})";
         }
 
-        private int? GetDirection()
+        private int? GetDirection() //get dierction id by name
         {
             int? result=null;
             using (MySqlConnection connection = new MySqlConnection(connectionString))

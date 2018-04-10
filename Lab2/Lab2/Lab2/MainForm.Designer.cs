@@ -100,10 +100,10 @@ namespace Lab2
             this.deleteRadioButton.AutoSize = true;
             this.deleteRadioButton.Location = new System.Drawing.Point(7, 89);
             this.deleteRadioButton.Name = "deleteRadioButton";
-            this.deleteRadioButton.Size = new System.Drawing.Size(67, 17);
+            this.deleteRadioButton.Size = new System.Drawing.Size(128, 17);
             this.deleteRadioButton.TabIndex = 3;
             this.deleteRadioButton.TabStop = true;
-            this.deleteRadioButton.Text = "DELETE";
+            this.deleteRadioButton.Text = "Вилучення науковця";
             this.deleteRadioButton.UseVisualStyleBackColor = true;
             this.deleteRadioButton.CheckedChanged += new System.EventHandler(this.DeleteRadioButton_CheckedChanged);
             // 
@@ -112,10 +112,10 @@ namespace Lab2
             this.updateRadioButton.AutoSize = true;
             this.updateRadioButton.Location = new System.Drawing.Point(7, 66);
             this.updateRadioButton.Name = "updateRadioButton";
-            this.updateRadioButton.Size = new System.Drawing.Size(69, 17);
+            this.updateRadioButton.Size = new System.Drawing.Size(131, 17);
             this.updateRadioButton.TabIndex = 2;
             this.updateRadioButton.TabStop = true;
-            this.updateRadioButton.Text = "UPDATE";
+            this.updateRadioButton.Text = "Оновлення науковця";
             this.updateRadioButton.UseVisualStyleBackColor = true;
             this.updateRadioButton.CheckedChanged += new System.EventHandler(this.UpdateRadioButton_CheckedChanged);
             // 
@@ -124,10 +124,10 @@ namespace Lab2
             this.addRadioButton.AutoSize = true;
             this.addRadioButton.Location = new System.Drawing.Point(6, 43);
             this.addRadioButton.Name = "addRadioButton";
-            this.addRadioButton.Size = new System.Drawing.Size(65, 17);
+            this.addRadioButton.Size = new System.Drawing.Size(132, 17);
             this.addRadioButton.TabIndex = 1;
             this.addRadioButton.TabStop = true;
-            this.addRadioButton.Text = "INSERT";
+            this.addRadioButton.Text = "Додавання науковця";
             this.addRadioButton.UseVisualStyleBackColor = true;
             this.addRadioButton.CheckedChanged += new System.EventHandler(this.AddRadioButton_CheckedChanged);
             // 
@@ -136,10 +136,10 @@ namespace Lab2
             this.getRadioButton.AutoSize = true;
             this.getRadioButton.Location = new System.Drawing.Point(7, 20);
             this.getRadioButton.Name = "getRadioButton";
-            this.getRadioButton.Size = new System.Drawing.Size(66, 17);
+            this.getRadioButton.Size = new System.Drawing.Size(132, 17);
             this.getRadioButton.TabIndex = 0;
             this.getRadioButton.TabStop = true;
-            this.getRadioButton.Text = "SELECT";
+            this.getRadioButton.Text = "Отримання науковця";
             this.getRadioButton.UseVisualStyleBackColor = true;
             this.getRadioButton.CheckedChanged += new System.EventHandler(this.GetRadioButton_CheckedChanged);
             // 
@@ -148,9 +148,9 @@ namespace Lab2
             this.byDirectCheck.AutoSize = true;
             this.byDirectCheck.Location = new System.Drawing.Point(47, 338);
             this.byDirectCheck.Name = "byDirectCheck";
-            this.byDirectCheck.Size = new System.Drawing.Size(79, 17);
+            this.byDirectCheck.Size = new System.Drawing.Size(154, 17);
             this.byDirectCheck.TabIndex = 3;
-            this.byDirectCheck.Text = "byDirection";
+            this.byDirectCheck.Text = "за напрямом досліджень";
             this.byDirectCheck.UseVisualStyleBackColor = true;
             this.byDirectCheck.CheckedChanged += new System.EventHandler(this.ByDirectCheck_CheckedChanged);
             // 
@@ -159,9 +159,9 @@ namespace Lab2
             this.byIDCheck.AutoSize = true;
             this.byIDCheck.Location = new System.Drawing.Point(46, 361);
             this.byIDCheck.Name = "byIDCheck";
-            this.byIDCheck.Size = new System.Drawing.Size(48, 17);
+            this.byIDCheck.Size = new System.Drawing.Size(102, 17);
             this.byIDCheck.TabIndex = 4;
-            this.byIDCheck.Text = "byID";
+            this.byIDCheck.Text = "за ID науковця";
             this.byIDCheck.UseVisualStyleBackColor = true;
             this.byIDCheck.CheckedChanged += new System.EventHandler(this.ByIDCheck_CheckedChanged);
             // 
@@ -258,10 +258,12 @@ namespace Lab2
             // 
             // dataGridView
             // 
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(245, 197);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(599, 313);
+            this.dataGridView.Size = new System.Drawing.Size(686, 313);
             this.dataGridView.TabIndex = 19;
             // 
             // nameGroupBox
@@ -302,7 +304,7 @@ namespace Lab2
             this.Controls.Add(this.title);
             this.Controls.Add(this.logo);
             this.Name = "MainForm";
-            this.Text = "Scientists [MSSQL Release]";
+            this.Text = "Scientists [MSSQL Version]";
             this.Load += new System.EventHandler(this.MainFrom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.queryGroupBox.ResumeLayout(false);
